@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F1 Streetwear - Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #0d0d0d 0%, #1a0000 100%);
+      color: #fff;
+    }
+    header {
+      background: linear-gradient(to right, #1a1a1a, #ff0000);
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin: 0 1em;
+      color: #fff;
+      text-decoration: none;
+    }
+    .hero {
+      background: url('f1-hero.jpg') center/cover no-repeat;
+      padding: 6em 2em;
+      text-align: center;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 4px solid #ff0000;
+    }
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    .btn-view {
+      margin-top: 1em;
+      background: red;
+      color: white;
+      border: none;
+      padding: 0.75em 1.5em;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .categories {
+      display: flex;
+      justify-content: space-around;
+      padding: 2em;
+    }
+    .category {
+      padding: 1em;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      width: 120px;
+      background-color: #1a1a1a;
+      transition: background 0.3s;
+    }
+    .category:hover {
+      background: #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>F1 Streetwear</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="login.html">Login</a>
+      <a href="login.html">Sign Up</a>
+      <a href="#">Cart</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Speed Meets Style</h1>
+    <p>Race-ready streetwear inspired by Formula 1</p>
+    <button class="btn-view" onclick="viewAll()">View All Products</button>
+  </section>
+
+  <section class="categories">
+    <div class="category" onclick="goToCategory('tees')">Tees</div>
+    <div class="category" onclick="goToCategory('jackets')">Jackets</div>
+    <div class="category" onclick="goToCategory('caps')">Caps</div>
+    <div class="category" onclick="goToCategory('accessories')">Accessories</div>
+    <div class="category" onclick="goToCategory('limited')">Limited</div>
+  </section>
+
+  <script>
+    function viewAll() {
+      window.location.href = "products.html";
+    }
+
+    function goToCategory(category) {
+      window.location.href = `category.html?type=${category}`;
+    }
+  </script>
+</body>
+</html>
